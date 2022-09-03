@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | Tip calculator app</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="img-container">
+    <img src="images/logo.svg" alt="logo">
+  </div>
+
+  <div class="window">
+    <div class="left-side">
+      <p class="captions">Bill</p>
+      <input type="number" class="bill" placeholder="0"></input>
+      <p class="captions">Select Tip %</p>
+      <div class="buttons">
+        <button onclick="calculate(0.05)" type="button">5%</button>
+        <button onclick="calculate(0.1)" type="button">10%</button>
+        <button onclick="calculate(0.15)" type="button">15%</button>
+        <button onclick="calculate(0.25)" type="button">25%</button>
+        <button onclick="calculate(0.5)" type="button">50%</button>
+        <input onkeypress="inputCalc()" class="customVal" placeholder="Custom"></input>
+      </div>
+      <div class="people-amount">
+        <p class="captions">Number of People</p>
+        <p class="warning">Can't be 0</p>
+      </div>
+      <input type="number" class="peopleNum" placeholder="0">
+    </div>
+    <div class="right-side">
+      <div class="results">
+        <p class="captions">Tip Amount</p>
+        <p class="smaller-captions">/ person</p>
+        <p class="tip-text">$0.00</p>
+      </div>
+      <div class="results">
+        <p class="captions">Total</p>
+        <p class="smaller-captions">/ person</p>
+        <p class="total-text">$0.00</p>
+      </div>
+      <button class="resetBut" onclick="reset()">Reset</button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+
+</body>
+</html>
